@@ -27,7 +27,7 @@ By including this project in my portfolio, I aim to demonstrate my skills in web
 
 ## Usage
 
-1. Open `index.html` in your web browser to view the responsive website.
+1. Open `responsive-filmpage.html` in your web browser to view the responsive website.
 2. Switch between sites by clicking on the links.
 
 ## Technologies Used
