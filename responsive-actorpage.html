@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anne Hathaway</title>
+
+    <!--Link to Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!--Link to CSS stylesheet-->
+    <link rel="stylesheet" href="styles.responsive.css">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+    <!--Collapsible navbar at the top of the webpage:-->
+    <nav class="navbar navbar-standard bg-body-tertiary ">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">NEXTFLIX spotlight</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> 
+        </div>
+      </nav> 
+      <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="">          
+        <div class="bg-standard p-4 bg-body-tertiary">
+            <div class="d-flex flex-row mb-3">
+                <div class="p-2">
+                    <h5 class="text-body-emphasis h4">Movies</h5>
+                    <p class="text-body-secondary"><a class="link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-dark" href="responsive-filmpage.html">Interstellar (2014)</a></p>
+                </div>
+                <div class="p-2">
+                    <h5 class="text-body-emphasis h4">Directors</h5>
+                    <p class="text-body-secondary"><a class="link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-dark" href="responsive-directorpage.html">Christopher Nolan</a></p>
+                </div>
+                <div class="p-2">
+                    <h5 class="text-body-emphasis h4">Actors</h5>
+                    <p class="text-body-secondary">Mackenzie Foy</p>
+                    <p class="text-body-secondary"><a class="link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-dark" href="responsive-actorpage.html">Anne Hathaway</a></p>
+                    <p class="text-body-secondary">Matthew McConaughey</p>
+                </div>
+            </div>  
+        </div>
+      </div>
+    
+    <!--Spotlight container showing an image of the actor, name and some infos-->
+    <!--Infos taken from https://en.wikipedia.org/wiki/Anne_Hathaway -->
+    <div class="container-fluid text-light shadow mb-5 spotlight">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 my-5 order-lg-2">
+                    <div class="image-cropper">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTkzOTE0NDQ0OV5BMl5BanBnXkFtZTgwMTI3MTMxMzE@._V1_FMjpg_UX1000_.jpg" class="rounded img-hathaway" alt="Anne Hathaway at an event for Interstellar (2014)">
+                    </div>
+                </div> 
+                <div class="col-lg-8 my-5 order-lg-1">
+                    <h1 class="display-1">Anne Hathaway</h1>
+                    <p class="fw-bold">Actress</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-reset bg-transparent">Born November 12, 1982 | New York, USA</li>
+                        <li class="list-group-item text-reset bg-transparent">Alma Mater: New York University</li>
+                        <li class="list-group-item text-reset bg-transparent">Facebook Likes: 11,000</li>
+                    </ul>
+                </div>              
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!--Biography-->
+            <div class="col-md-8 mb-5">
+                <h2>Biography</h2>
+                <h5>Early Life</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h5>Career</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h5>Personal Life</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <i>Source: <a class="link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-dark" 
+                        href="https://www.lipsum.com/">Lorem Ipsum</a></i></p>
+            </div>
+            <!--List of all movies from the spreadsheet-->
+            <div class="col-md-4 mb-5">
+                <h2>Movies</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Alice Through the Looking Glass (2016)</li>
+                    <li class="list-group-item">The Intern (2015)</li>
+                    <li class="list-group-item"><a class="link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-dark" href="responsive-filmpage.html">Interstellar (2014)</a></li>
+                    <li class="list-group-item">Song One (2014)</li>
+                    <li class="list-group-item">Les Misérables (2012)</li>
+                    <li class="list-group-item">One Day (2011)</li>
+                    <li class="list-group-item">Rio (2011)</li>
+                    <li class="list-group-item">Alice in Wonderland (2010)</li>
+                    <li class="list-group-item">Love & Other Drugs (2010)</li>
+                    <li class="list-group-item">Valentine’s Day (2010)</li>
+                    <li class="list-group-item">Bride Wars (2009)</li>
+                    <li class="list-group-item">Get Smart (2008)</li>
+                    <li class="list-group-item">Rachel Getting Married (2008)</li>
+                    <li class="list-group-item">Becoming Jane (2007)</li>
+                    <li class="list-group-item">The Devil Wears Prada (2006)</li>
+                    <li class="list-group-item">Brokeback Mountain (2005)</li>
+                    <li class="list-group-item">Hoodwinked! (2005)</li>
+                    <li class="list-group-item">The Princess Diaries 2: Royal Engagement (2004)</li>
+                    <li class="list-group-item">Ella Enchanted (2004)</li>
+                    <li class="list-group-item">Nicholas Nickleby (2002)</li>
+                    <li class="list-group-item">The Princess Diaries (2001)</li>
+                    <li class="list-group-item">The Other Side of Heaven (2001)</li>
+                    <li class="list-group-item">Get Real (1999)</li>
+                  </ul>
+            </div>    
+        </div>
+
+        <!--Card-container with movies that are available on Nextflix (own selection)-->
+        <!--Taken from https://getbootstrap.com/docs/5.3/components/card/-->
+        <div class="row">
+            <h2>Anne Hathaway Movies on Nextflix</h2>
+        </div>
+        <div class="row mb-4 row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 flex-nowrap overflow-scroll">
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTUyNjE5NjI5OF5BMl5BanBnXkFtZTgwNzYzMzU3NjE@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Film Cover The Intern (2015)">
+                     <div class="card-body">
+                        <h5 class="card-title">The Intern (2015)</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <a href="responsive-filmpage.html"><img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Film Cover Interstellar (2014)"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Interstellar (2014)</h5>
+                        <p class="card-text">When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWZhNGM1ZTItYTg4Zi00MTE2LTg5MjYtYjdmYmZkNTVmYTQwXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Film Cover Les Misèrables (2012)">
+                    <div class="card-body">
+                        <h5 class="card-title">Les Misérables (2012)</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjQ3ZTIzOTItMGNjNC00MWRmLWJlMGEtMjJmMDM5ZDIzZGM3XkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Film Cover The Devil Wears Prada (2006)">
+                    <div class="card-body">
+                        <h5 class="card-title">The Devil Wears Prada (2006)</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Scroll page back to top -->
+    <div class="gototop">
+        <a class="link-underline-opacity-0 link-underline-opacity-75-hover link-dark" 
+        href="#top">Go to Top</a>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,430 @@
+/* GENERAL STYLES that apply to all pages: */
+
+/* Set font family, color, line-height, margin, padding for the whole body to imitate Bootstrap design */
+/* Line-height taken from https://www.w3schools.com/cssref/pr_dim_line-height.php */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(40, 40, 43);
+    line-height: 1.6;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Style header */
+header {
+    background-color: whitesmoke;
+    color: rgb(40, 40, 43);
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;  
+}
+
+/* Style title and subtitle*/
+.title {
+    font-size: 80px;
+    font-weight: 100;
+    line-height: 0;
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+/* Style list by removing bullet points, setting margin */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Add border to list items */
+li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+/* Style links by overriding default colour and removing underline */
+a {
+    color: rgb(40, 40, 43);
+    text-decoration: none;
+}
+
+/* Style linkes by adding underline if hover */
+a:hover {
+    text-decoration: underline;
+}
+
+.gototop {
+    text-align: right;
+    text-decoration: underline;
+    background-color: white;
+}
+
+
+/* MARKUP FOR THE FILMPAGE: */
+
+/* Set background title picture */
+/* Taken from https://www.w3schools.com/howto/howto_css_full_page.asp */
+.filmpage {
+    height: 100%;
+    margin: 0;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMmI5OGRiY2YtMjU1Ny00NTEwLWEzMTMtMDY3ZGYzNmE3YjRjL2ltYWdlXkEyXkFqcGdeQXVyNzE4NDc2Mjc@._V1_FMjpg_UX1000_.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Set flex-container */
+.container {
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    padding-left: 200px;
+    padding-right: 200px; 
+}
+
+/* Set title container to transparent to see background picture */
+.transparent {
+    background-color: transparent;
+}
+
+/* Justify content to end */
+.justify-end {
+    justify-content: end;
+}
+
+/* Style film overview information */
+.film-overview {
+    padding-top: 220px;
+    padding-bottom: 310px;
+    text-align: center;
+    flex: 0 1 55%;
+}
+
+/* Set video sizes */
+iframe {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+/* Create scrollable container for image gallery */
+/* Taken from https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp with own adjustments */
+.film-scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 100%;
+    max-width: 100%;
+    height: 312px;
+    overflow: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Set all gallery images to same size and add padding */
+.film-scroll-container img {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Adjust padding for first and last gallery image */
+.film-scroll-container .first-gallery-picture {
+    padding-left: 15px;
+}
+
+.film-scroll-container .last-gallery-picture {
+    padding-right: 15px;
+}
+
+.reviews {
+    flex-basis: 70%;
+    padding-right: 15px; 
+}
+
+/* Set up grid for reviews */
+.review-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+    "card-dark card-light"
+    "card-dark card-medium";
+}
+
+.about-movie {
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+/* Set general styling for all review cards */
+/* Taken from https://www.w3schools.com/css/css_border_rounded.asp */
+.review-card {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Style dark card and assign spot in grid */
+.card-dark {
+    background-color: rgb(30, 54, 82);
+    color: whitesmoke;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin-right: 15px;  
+}
+
+/* Style medium coloured card and assign spot in grid */
+.card-medium {
+    background-color: rgb(204, 218, 234);
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Style light card and assign spot in grid */
+.card-light {
+    background-color: rgb(245, 250, 255);
+}
+
+/* Align subtitles under portraits and override default styling for h5 and h6 */
+.name-and-role {
+    text-align: center;
+    line-height: 0px;
+    padding-bottom: 25px;
+}
+
+.name-and-role h5 {
+    font-size: 20px;
+}
+
+.name-and-role h6 {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* Cut all portraits to same size, round them, set shadow */
+.portrait-rounded-circle {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Set opacity if hover */
+.portrait-rounded-circle:hover {
+    opacity: 0.5;
+}
+
+.star-container {
+    display: flex;
+    padding: 0px;
+    justify-content: space-between;  
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.align-right {
+    text-align: right;
+}
+
+
+/* MARKUP FOR ACTOR- & DIRECTORPAGE: */
+
+/* Style spotlight area */
+/* Taken from https://www.w3schools.com/css/css3_gradients.asp */
+.spotlight {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: linear-gradient(to right, rgb(96, 117, 143), rgb(30, 54, 82));
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Round picture of actor and director and set it to same size */
+/* Taken from https://stackoverflow.com/questions/26421274/css-circular-cropping-of-rectangle-image with own adjustments */
+.image-cropper {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* Individual adjustments for Anne Hathaway's portrait */
+.img-hathaway {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+    margin-left: -20%;
+}
+
+/* Individual adjustments for Christopher Nolan's portrait */
+.img-nolan {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    /*margin-left: 0%; */
+}
+
+/* Add padding around cards */
+.card-col {
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* Style card */
+.card {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Adjust padding for the first and last card */
+.first-card {
+    padding-left: 5px;
+}
+
+.last-card {
+    padding-right: 5px;
+}
+
+/* Set all card images to same size and align them */
+.card img {
+    height: 420px;
+    width: 280px;
+    object-fit: cover;
+    object-position: top;
+    padding: 0px;
+}
+
+/* Set opacity if hover */
+.card img:hover {
+    opacity: 0.5;
+}
+
+/* Set card-body- height, add padding and adjust line-height */
+.card-body {
+    height: 210px;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+/* Assign child elements to parent grid which is defined for actor- and directorpage below */
+.nextflix-movies {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.movie-container {
+    display: flex;
+    overflow: scroll;
+    background-color: white; 
+}
+
+
+
+
+/* MARKUP FOR DIRECTORPAGE: */
+
+.spotlight-grid-container-nolan {
+    display: grid;
+    grid-template-columns: 33% 66%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "spotlight-picture spotlight-infos";
+    
+    align-items: center;
+}
+
+.grid-container-nolan {
+    display: grid;
+    grid-template-columns: 33% 66%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+    "movie-list bio"
+    "nextflix-movies nextflix-movies";
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.movie-list-nolan {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.bio-nolan {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+
+/* MARKUP FOR ACTORPAGE: */
+
+.spotlight-grid-container-hathaway {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "spotlight-infos spotlight-picture";
+    align-items: center;
+}
+
+.grid-container-hathaway {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+    "bio movie-list"
+    "nextflix-movies nextflix-movies";
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.movie-list-hathaway {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.bio-hathaway {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+
+

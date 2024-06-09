@@ -1,0 +1,166 @@
+/* Anchor for scrolling back to top */
+.gototop {
+    text-align: right;
+    text-decoration: underline;
+    background-color: white;
+}
+
+/* MARKUP FOR THE FILMPAGE */
+
+/* Set background image */
+/* Taken from https://www.w3schools.com/howto/howto_css_full_page.asp */
+.filmpage {
+    height: 100%;
+    margin: 0;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMmI5OGRiY2YtMjU1Ny00NTEwLWEzMTMtMDY3ZGYzNmE3YjRjL2ltYWdlXkEyXkFqcGdeQXVyNzE4NDc2Mjc@._V1_FMjpg_UX1000_.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Set large margin for text in front of background image */
+.film-overview-margin {
+    margin-top: 150px;
+    margin-bottom: 300px;
+    margin-left: 30px;
+}
+
+/* Adjust margins for screensizes of 400px and smaller so that the text does not 
+overlay dark parts of the background picture and remains legible as good as possible */
+@media (max-width: 500px) {
+    .film-overview-margin {
+        margin-top: 70px;
+        margin-bottom: 300px;
+        margin-left: 0px;
+    }
+}
+
+/* Make container starting at storyline white */
+.bg-container {
+    background-color: white;
+}
+
+/* Make gallery a horizontally scrollable container */
+/* Taken from https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp with own adjustments */
+.film-scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    padding: 5px;
+}
+
+/* Set all gallery images to same size, make them keep their aspect ratio, and center them */
+.film-scroll-container img {
+    padding: 5px;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Make gallery a vertically scrollable container
+and adjust height & width when screensize reaches 900px and smaller */
+@media (max-width: 900px) {
+    .film-scroll-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 100%;
+        max-width: 100%;
+        height: 312px;
+        overflow: scroll;
+    }
+
+    .film-scroll-container img {
+        width: 100%;
+        height: 302px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.carousel-inner {
+    justify-content: center;
+}
+
+.trailer-carousel {
+    width: 1120px;
+    height: 630px;
+    object-fit: cover;
+}
+
+.trailerbox {
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* Taken from https://www.w3schools.com/howto/howto_css_image_text.asp */
+.image-overlay {
+    position: absolute;
+    top: 7%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* MARKUP FOR ACTOR- & DIRECTORPAGE: */
+
+/* Set background gradient to spotlight container */
+/* Taken from https://www.w3schools.com/css/css3_gradients.asp */
+.spotlight {
+    background-image: linear-gradient(to right, rgb(96, 117, 143), rgb(30, 54, 82));
+}
+
+/* Crop spotlight images so that they are rounded */
+/* Taken from https://stackoverflow.com/questions/26421274/css-circular-cropping-of-rectangle-image with own adjustments */
+/* Taken from https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio */
+.image-cropper {
+    max-width: 420px;
+    max-height: 420px;
+    aspect-ratio: 1/1;
+    height: 100%;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* Specific markup for Anne Hathaway's image */
+.img-hathaway {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+    margin-left: -20%;
+}
+
+/* Specific markup for Christopher Nolan's image */
+.img-nolan {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    margin-left: 0%;
+}
+
+/* Set opacity if hover over card images */
+.card img:hover {
+    opacity: 0.5;
+}
+
+/* Set all cast pictures to the same size */
+.cast {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Set opacity if hover over cast image */
+img:hover.cast {
+    opacity: 0.5; 
+}
+
+

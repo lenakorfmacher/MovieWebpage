@@ -1,0 +1,262 @@
+/* GENERAL STYLES that apply to all webpages: */
+
+/* Line-height taken from https://www.w3schools.com/cssref/pr_dim_line-height.php */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(40, 40, 43);
+    line-height: 1.6;
+    margin: 0px;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 0.2;
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+header {
+    background-color: whitesmoke;
+    color: rgb(40, 40, 43);
+    padding: 10px;
+    padding-right: 10px;
+    text-align: left;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+a {
+    color: rgb(40, 40, 43);
+    text-decoration: none;
+}
+
+.gototop {
+    text-align: right;
+    text-decoration: underline;
+}
+
+
+/* MARKUP FOR THE FILMPAGE: */
+
+/* Set background picture */
+/* Taken from https://www.w3schools.com/howto/howto_css_full_page.asp */
+.filmpage {
+    height: 100%;
+    margin: 0;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMmI5OGRiY2YtMjU1Ny00NTEwLWEzMTMtMDY3ZGYzNmE3YjRjL2ltYWdlXkEyXkFqcGdeQXVyNzE4NDc2Mjc@._V1_FMjpg_UX1000_.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Make container transparent so that background picture is visible */
+.transparent {
+    padding-top: 55px;
+    padding-bottom: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+/* Make background white after transparent container */
+.background-white {
+    background-color: white;
+}
+
+/* Set width and height of video */
+iframe {
+    width: 360px;
+    height: 225px;
+    object-fit: cover;
+}
+
+/* Flex-container for image-gallery */
+/* Taken from https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp with own adjustments */
+.film-scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%;
+    max-width: 100%;
+    height: 312px;
+    overflow: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Set all images in gallery to same size and make them fit */
+.film-scroll-container img {
+    width: 330px;
+    height: 285px;
+    object-fit: cover;
+    object-position: center;
+    padding-bottom: 15px;
+}
+
+/* Add padding to first gallery image */
+.first-gallery-image {
+    padding-top: 15px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* Set border, shadow, padding and margin for all review cards */
+.review-card {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Style three different color schemes for review cards */
+.card-dark {
+    background-color: rgb(30, 54, 82);
+    color: whitesmoke;  
+}
+
+.card-medium {
+    background-color: rgb(204, 218, 234);
+}
+
+.card-light {
+    background-color: rgb(245, 250, 255);
+}
+
+.stars {
+    text-align: center;
+}
+
+/* Set all stars-portraits to the same size, make them rounded and add shadow */
+.rounded-circle {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Align subtitles under portraits and override default styling for h5 and h6 */
+.name-and-role {
+    text-align: center;
+    line-height: 0px;
+    padding-bottom: 25px;
+}
+
+.name-and-role h5 {
+    font-size: 20px;
+}
+
+.name-and-role h6 {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+
+/* MARKUP FOR ACTOR- AND DIRECTORPAGE */
+
+/* Style spotlight area */
+/* Taken from https://www.w3schools.com/css/css3_gradients.asp */
+.spotlight {
+    background-color: rgb(96, 117, 143);
+    background-image: linear-gradient(to right, rgb(96, 117, 143), rgb(30, 54, 82));
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Set size of spotlight portraits and make them rounded */
+/* Taken from https://stackoverflow.com/questions/26421274/css-circular-cropping-of-rectangle-image with own adjustments */
+.image-cropper {
+    width: 320px;
+    height: 320px;
+    /* position: relative; */
+    overflow: hidden;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.img-hathaway {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+    margin-left: -20%;
+}
+
+.img-nolan {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+/* Style the scrollable container */
+.card-col {
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.card {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.first-card {
+    padding-left: 5px;
+}
+
+.last-card {
+    padding-right: 5px;
+}
+
+.card img {
+    height: 460px;
+    width: 350px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card-body {
+    height: 180px;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+.movies-flexbox {
+    display: flex;
+    overflow: scroll;
+}
+
